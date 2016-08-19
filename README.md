@@ -4,6 +4,8 @@ Neural Network with Genetic Algorithms Experiment 1 (food and water)
 An experiment using Neural Networks and genetic algorithms
 I have always found you understand something better if you build it yourself.
 
+See it running at https://www.youtube.com/watch?v=SbZittR8Mok
+
 My aim was to make a "lifeform" that learnt basic needs.  The life form needs water and food to survive.
 Water is always available, food is scattered and once eater re-spawns elsewhere.
 If the "lifeform" runs out of either then it is classed as "dead"
@@ -19,6 +21,8 @@ I have included data for the network after I left it running over night (it reac
 I found the following resources useful and inspirational while creating this:
 
 A colleague: https://github.com/GuillaumeBouchetEpitech/
+
 MIT AI Courseware - Worth a watch: https://www.youtube.com/playlist?list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi
+
 Good resource and tutorials: http://www.ai-junkie.com/
 
