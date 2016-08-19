@@ -120,7 +120,7 @@ Simulation.prototype.createChildPopulation = function() {
 	for (var a=0; a<this.species.length; a++) this.species[a].calculateFitness();
 	// Step 2: Produce child race
 	this.ga.setParents(this.species);
-	this.ga.produceNextGeneration(NUM_ALPHAS, 0.7, 0.1, 0.3);
+	this.ga.produceNextGeneration(NUM_ALPHAS, CROSS_OVER_RATE, MUTATION_RATE, MUTATION_AMOUNT);
 	this.species = this.ga.getChildren();		
 }
 

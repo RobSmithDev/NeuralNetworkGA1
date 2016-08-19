@@ -32,3 +32,9 @@ var MAX_TURN_SPEED = 0.3;
 var NUM_ALPHAS = 4;
 // Number of food blobs on screen
 var NUM_FOOD_ON_BOARD = 20;
+// The cross-over rate used in the GA
+var CROSS_OVER_RATE = 0.7;
+// Mutation rate
+var MUTATION_RATE = 0.1;
+// The amount of mutation that can happen
+var MUTATION_AMOUNT = 0.3;
