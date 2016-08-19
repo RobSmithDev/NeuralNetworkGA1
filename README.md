@@ -1,5 +1,5 @@
 # NeuralNetworkGA1
-Neural Network with Genetic Algorithms Experiment 1 (food and water)
+Neural Network with Genetic Algorithms Experiment 1 (food and water) with online demo!
 
 An experiment using Neural Networks and genetic algorithms
 I have always found you understand something better if you build it yourself.
