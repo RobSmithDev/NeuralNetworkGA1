@@ -5,6 +5,7 @@ An experiment using Neural Networks and genetic algorithms
 I have always found you understand something better if you build it yourself.
 
 See it running at https://youtu.be/yZUhprqGVTE
+Live demo at http://experiments.robsmithdev.co.uk/NeuralNetworkGA1/
 
 My aim was to make a "lifeform" that learnt basic needs.  The life form needs water and food to survive.
 Water is always available, food is scattered and once eater re-spawns elsewhere.
