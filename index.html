@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>NN Test</title>
+		
+		<style>
+			* {
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+			
+			textarea, textarea:hover, textarea:active {
+				outline: 0;
+			}
+			
+			body {
+				padding: 10px;
+			}
+			
+			section {
+				width: 1220px;
+				height: 610px;
+			}
+			
+			.textoutput {
+				width: 600px; 
+				height: 20px; 
+				border: 1px solid #808080; 
+				background-color: #F0F0F0;
+				text-align: center;
+			}
+			
+			.container {
+				right: 0px;
+				height: 16px;
+				background-color: #F0F0F0;
+				position: relative;
+				font-size: 8pt;
+				font-family: arial;
+				border-bottom: 1px solid #FFFFFF;
+			}
+			
+			.containerText {
+				width: 25px;
+				height: 16px;
+				text-align: center;
+				color: #000000;
+				line-height: 16px;
+				background-color: #E0E0E0;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.foodClass {
+				height: 8px;
+				background-color: #00C000;				
+				position: absolute;
+				left: 25px;
+				top: 0;
+			}
+			.waterClass {
+				height: 8px;
+				background-color: #008FFF;
+				position: absolute;
+				left: 25px;
+				top: 8px;
+			}
+			
+			.buttonbar {
+				width: 600px;
+				height: 30px;
+				margin-top: 10px;
+				background-color: #F8F8F8;
+				border: 1px solid #808080;
+			}
+			
+			.but {
+				min-width: 40px;
+				padding-left: 4px;
+				padding-right: 4px;
+				height: 25px;
+				float: left;
+				margin-right: 3px;
+				margin-top: 2px;
+				margin-left: 3px;
+				cursor: pointer;
+			}
+		</style>
+		
+		<script language="Javascript" src="canvas.js"></script>
+		<script language="Javascript" src="config.js"></script>
+		
+		<script language="Javascript" src="17120.js"></script>
+		
+		<script language="Javascript" src="nn.js"></script>
+		<script language="Javascript" src="ga.js"></script>
+		
+		<script language="Javascript" src="lifeform.js"></script>
+		<script language="Javascript" src="simulation.js"></script>
+		
+		<script language="Javascript" src="run.js"></script>
+		
+	</head>
+	<body>
+		<section>
+		<div style="width: 600px; height: 600px; float: right">
+			<div id="textoutput" class="textoutput"></div>
+			<div id="buttonbar" class="buttonbar">
+				<button onclick="switchSpeed(1)" class="but" title="Run at normal speed">1x</button>
+				<button onclick="switchSpeed(2)" class="but" title="Run at 2x speed">2x</button>
+				<button onclick="switchSpeed(5)" class="but" title="Run at 5x speed">5x</button>
+				<button onclick="switchSpeed(10)" class="but" title="Run at 10x speed">10x</button>
+				<button onclick="switchSpeed(100)" class="but" title="Run at 5x speed">50x</button>
+				<button onclick="switchSpeed(-1)" class="but" title="Run at maximum speed">MAX</button>
+				
+				<button onclick="resetTo0()" class="but" style="margin-left: 20px" title="Reset back to generation 0">Reset</button>
+				<button onclick="resetToFuture()" class="but" title="Upgrades the first four lifeforms to ones from generation 17120" >Future</button>
+				<button onclick="resetTo17120()" class="but" title="Switch to Generation 17120">Goto 17120</button>
+			</div>
+			<div id="scores" style="width: 600px; height: 520px; margin-top: 10px;border: 1px solid #808080"></div>
+		</div>
+		<canvas id="mycanvas" width="600" height="600" style="float: left; border: 1px solid #808080"></canvas>
+		</section>
+		<b>Key</b><br>
+		<span style="color: #FF0000">Normal Lifeform</span> | <span style="color: #C0C000">Previous Alphas</span> | <span style="color: #808080">Dead :(</span> | <span style="color: #00C000">Food</span> | <span style="color: #0000FF">Water</span> Lines indicate nearest food/water | Graph is food/water reserves
+	</body>
+</html>
