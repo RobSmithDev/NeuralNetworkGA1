@@ -23,7 +23,7 @@ GeneticAlgorithm.prototype.pickParentViaRoulette = function(totalFitness) {
 	
 	var len = this.networks.length;
 	for (var a=0; a<len; a++) {
-		soFar += this.networks[a].getFitness();
+		soFar += this.networks[a].fitness;
 		if (soFar >= rand) return a;
 	}
 	
@@ -35,11 +35,11 @@ GeneticAlgorithm.prototype.pickParentViaRoulette = function(totalFitness) {
 GeneticAlgorithm.prototype.crossOver = function(parent1, parent2, crossOverRate) {
 	// These go onwards as clones
 	if ((Math.random()>crossOverRate) || (parent1 == parent2)) 
-		return [parent1.getWeights(),parent2.getWeights()];
+		return [parent1.weights,parent2.weights];
 		
 	// Else produce offspring
-	var w1 = parent1.getWeights();
-	var w2 = parent2.getWeights();
+	var w1 = parent1.weights;
+	var w2 = parent2.weights;
 	
 	// This is a semi-uniform crossover with random chunks coming from either parent
 	/*
@@ -101,15 +101,15 @@ GeneticAlgorithm.prototype.produceNextGeneration = function(numBest, crossOverRa
 	// First calculate fitness and get a total
 	var totalFitness = 0;
 	for (var a=0; a<this.networks.length; a++) 
-		totalFitness+=this.networks[a].getFitness();
+		totalFitness+=this.networks[a].fitness;
 	
 	// Sort the list by fitness, worst first
-	this.networks.sort(function(a,b) {return a.getFitness()-b.getFitness();});
+	this.networks.sort(function(a,b) {return a.fitness-b.fitness;});
 	
 	// Output the best ones regardless
 	var newNetworks = [];
 	while (numBest>0) {
-		newNetworks.push(this.networks[this.networks.length-numBest].getWeights());
+		newNetworks.push(this.networks[this.networks.length-numBest].weights);
 		numBest--;
 	}
 	
@@ -128,7 +128,7 @@ GeneticAlgorithm.prototype.produceNextGeneration = function(numBest, crossOverRa
 	
 	// Now reset all the networks with the new values
 	for (var a=0; (a<newNetworks.length) && (a<this.networks.length); a++)
-		this.networks[a].setWeights(newNetworks[a]);
+		this.networks[a].weights = newNetworks[a];
 }
 
 

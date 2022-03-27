@@ -7,7 +7,7 @@ var simulation = 0;
 
 // Chyange the speed
 function switchSpeed(speed) {
-	simulation.switchSpeed(speed);
+	simulation.speed = speed;
 }
 
 // Reset to generation 0
